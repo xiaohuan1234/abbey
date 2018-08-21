@@ -53,16 +53,9 @@ app.use(function(req, res, next){
 
 
 function nextWeek() {
-    
     let today     = moment(new Date());
-
-
-
-
     var daysUntilNextMonday = 8 - today.weekday();
-    
     let nextMonday  = moment(new Date()).add(daysUntilNextMonday,'days');
-    
     console.log("today is " + today.format("dddd, MMMM Do YYYY"));
     console.log("nextMonday is " + nextMonday.format("dddd, MMMM Do YYYY"));
     var nextWeek = [];
@@ -71,8 +64,9 @@ function nextWeek() {
     }
     return nextWeek;
 }
+
 // app.use(userRoutes);
-/*app.use("/mealScheduled", mealScheduledRoutes);*/
+// app.use("/mealScheduled", mealScheduledRoutes);
 
 Seed();
 
