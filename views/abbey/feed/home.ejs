@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Abbey.Today</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/v4-shims.css">
+        <link rel="stylesheet" href="/abbey/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <a class="navbar-brand" href="#">
+                Abbey
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="#">My Meals <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="#">How It Works</a>
+              <a class="nav-item nav-link" href="#">About</a>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="container">
+            <div class="meal-feed">
+                
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8 col-sm-10 meal-history-nav justify-content-center">
+                                        <ul class="nav nav-pills " style="padding: 0px 10px">
+             <li class="nav-item">
+                <a class="nav-link active" href="#">Upcoming</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Last Week</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Last Month</a>
+              </li>
+            </ul>
+                        <!--</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+            
+            <!--<div class="row justify-content-center embed-responsive embed-responsive-item">-->
+            <!--    <div class="col-lg-6 col-md-8 col-sm-10">-->
+            <!--        <div class=" " style="">-->
+            
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</div>-->
+            
+            
+<%meals.forEach(function(meal){%>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8 col-sm-10">
+                    <div class="card" style="margin-bottom: 20px;">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <img class="card-img-top embed-responsive-item img-thumbnail meal-img" src="<%=meal.image%>" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><%=meal.name%></h5>
+                            <!--<a class="btn btn-dark btn-lg" href="/meals/<%=meal._id%>">Info</a>-->
+                            <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                            <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%});%>
+            </div>
+        </div>
+        <!--<p>YelpCamp©2018</p>-->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+    </body>
+</html>            

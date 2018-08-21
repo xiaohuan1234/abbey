@@ -1,0 +1,46 @@
+<%include ./partials/header%>
+
+            <div class="card text-center trial-week-menu">
+            <div class="text-center">
+            <h3 class="card-title trial-week-title">Trial Week Menu
+            <p class="text-muted trial-week-purpose">
+              <!--Your taste is learned this week-->
+            
+            </p>
+            </h3>
+            
+            </div>
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Lunch ($75)</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Dinner ($100)</a>
+      </li>
+      <li class="nav-item  ml-auto">
+      <a href="#" class="btn btn-md btn-primary request-trial">Request Trial</a>
+      </li>
+    </ul>
+  </div>
+  
+  <ul class="kick-off-week">
+        <%mealScheduled.forEach(function(meal, index){%>
+            <li>
+                <div class="card-body">
+    <h6 class="card-title day-of-week"><%=nextWeekDays[index]%></h6>
+    <h3 class="card-title meal-name"><%=meal.name%></h3>
+    <p class="card-text meal-description text-muted"><%=meal.description%></p>
+    <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+  </div>
+                </li>
+                <%});%>
+            </ul>
+  <!--<div class="card-body">-->
+  <!--  <h5 class="card-title">Special title treatment</h5>-->
+  <!--  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+  <!--  <a href="#" class="btn btn-primary">Go somewhere</a>-->
+  <!--</div>-->
+</div>
+            
+<%include ./partials/footer%>    

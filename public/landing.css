@@ -1,0 +1,139 @@
+body {
+    background: #eeeeee;
+}
+:root {
+    --main-bg-color: coral;    
+}
+
+
+#landing-header {
+    text-align: center;
+    /*padding-top: 30vh;*/
+    position: absolute;
+    top: 5vh;
+    right: 5vh;
+    z-index: 1;
+}
+
+#landing-header h1 {
+    color: white;
+}
+.landing-background,
+.slideshow {
+    position: fixed;
+    list-style: none;
+    height: 90%;
+    width: 100%;
+    top: 56px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+.landing-background {
+    background-color: red;
+    background-image: url("https://media0.giphy.com/media/gw3NpMPvrN64YrC0/giphy.gif");
+    background-size: cover;
+}
+.slideshow li {
+    /*position: absolute;*/
+    width: 500px;
+    height: 500px;
+    /*top: 0;*/
+    /*left: 0;*/
+    margin: 5px auto;
+    z-index: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: imageAnimation 50s linear infinite;
+    border-radius: 5%;
+}
+.slideshow li {
+    color: white;
+    text-align: center;
+}
+.slideshow li:nth-child(1){
+    /*background-image: url("https://media0.giphy.com/media/gw3NpMPvrN64YrC0/giphy.gif");*/
+    background-image: url("https://i.pinimg.com/564x/d5/6e/20/d56e2047a38370b22279278713f566ac.jpg");
+}
+
+.slideshow li:nth-child(2){
+    background-image: url("http://coveteur.com/wp-content/uploads/2017/03/Three_Fish_Roll_1.gif");
+    animation-delay: 10s;
+}
+
+.slideshow li:nth-child(3){
+    background-image: url("https://media1.tenor.com/images/d14036639ace18d0fe035c5b28c526c0/tenor.gif?itemid=4131205");
+    animation-delay: 20s;
+}
+
+.slideshow li:nth-child(4){
+    background-image: url("https://media.giphy.com/media/Yw8kFbeDlutgI/giphy.gif");
+    animation-delay: 30s;
+}
+
+.slideshow li:nth-child(5){
+    background-image: url("https://media.giphy.com/media/3oKIPbV4CRWwIDizgQ/giphy.gif");
+    animation-delay: 40s;
+}
+
+@keyframes imageAnimation {
+   0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  5% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+}
+
+/* Older browser support - class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
+
+.kick-off-week {
+    list-style: none;
+    text-align: center;
+}
+.card-body,
+.card-title,
+.card-text {
+    font-size: 90%;
+}
+.day-of-week {
+    /*color: var(--main-bg-color);*/
+}
+.meal-name {
+    font-size: 120%;
+}
+.card-header {
+    background-color: white;
+}
+.nav-link {
+    color: #495057;
+}
+.request-trial {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.trial-week-title {
+    font-size: 120%;
+    margin-top:10px;
+    margin-bottom: -14px;
+    margin-left: 5vw;
+}
+.trial-week-purpose {
+    font-size: 80%;
+    margin-top: 5px;
+}

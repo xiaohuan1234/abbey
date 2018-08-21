@@ -1,0 +1,28 @@
+/*body {*/
+/*    background-color: pink;*/
+/*}*/
+
+.meal-img {
+    object-fit: cover;
+    z-index: 1;
+}
+.meal-history-nav{
+    position: fixed;
+    z-index: 9;
+    top: 50px;
+    background-color: white;
+    height: 70px;
+    line-height: 20px;
+    padding: 20px 15px;
+}
+.meal-history-nav li {
+    padding: 0px;
+}
+
+.meal-feed {
+    margin-top: 70px;
+}
+
+.nav-link {
+    font-size: 0.8em;
+}
